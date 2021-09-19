@@ -17,7 +17,6 @@ class SecondaryViewController: UIViewController {
         super.viewDidLoad()
         
         textLabel?.text = text
-        self.navigationController?.isNavigationBarHidden = true
     }
     
     

@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Lottie
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var secondaryLabel: UILabel!
+    
+    @IBOutlet weak var dataAnimationView: AnimationView!
     
     static let notificationName = Notification.Name("myNotificationName")
     
@@ -17,12 +20,16 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        dataAnimationView.backgroundColor = .clear
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
+        
+        dataAnimationView.loopMode = .loop
+        dataAnimationView.play()
     }
     
     // Passing Data Between View Controllers with Properties (A → B)
