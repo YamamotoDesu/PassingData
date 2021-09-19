@@ -168,10 +168,9 @@ class SecondaryViewController: UIViewController {
 }
 ```
 
-
-
 ## Passing Data Back with a Closure  
-<img src="https://github.com/YamamotoDesu/PassingData/blob/main/PassingData/Gif/DataBackWithClosure.gif" width="300" height="500"> 
+<img src="https://github.com/YamamotoDesu/PassingData/blob/main/PassingData/Gif/DataBackWithClosure.gif" width="300" height="500">  
+
 ### SecondaryViewController       
 ```swift
 class SecondaryViewController: UIViewController {
@@ -185,7 +184,8 @@ class SecondaryViewController: UIViewController {
         print("completionHandler returns... \(result)")
     }
 }
-``` 
+
+```  
 
 ### MainViewController 
 ```swift
