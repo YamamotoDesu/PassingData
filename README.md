@@ -76,9 +76,9 @@ class MainViewController: UIViewController
 }
 ```
 
-### SecondaryViewController  
+### PrepareViewController  
 ```swift
-class SecondaryViewController: UIViewController
+class PrepareViewController: UIViewController
 {
     var text:String = ""
 
