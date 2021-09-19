@@ -62,10 +62,7 @@ class MainViewController: UIViewController
             vc.text = "Passing Data Between View Controllers Using Segues (A → B)"
         
             vc.completionHandler = { data in
-
-                print("Data received: \(data)")
                 self.secondaryLabel.text = data
-                self.secondaryLabel.isHidden = false
             }
         }
         
