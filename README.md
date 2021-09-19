@@ -1,9 +1,43 @@
 # **[How To: Pass Data Between View Controllers in Swift](https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/)**  
 
 ## Passing Data Between View Controllers with Properties (A → B) 
-<img src="https://user-images.githubusercontent.com/47273077/130161412-589ca8c6-ac8b-41b4-bfd1-a134b8d12450.png" width="600" height="300">   
-**[Emoji](https://github.com/YamamotoDesu/OldCollectionView/blob/main/EmojiLibrary/Emoji.swift)**  
+<img src="https://github.com/YamamotoDesu/PassingData/blob/main/PassingData/Gif/ByProperties.gif" width="300" height="500"> 
+
+### MainViewController 
 ```swift
+class MainViewController: UIViewController
+{
+    var text:String = ""
+
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+    }
+    
+        @IBAction func onButtonATap()
+    {
+        let vc = SecondaryViewController(nibName: "SecondaryViewController", bundle: nil)
+        vc.text = "Passing Data Between View Controllers with Properties (A → B)"
+        
+    }
+}
+```
+
+### SecondaryViewController  
+```swift
+class SecondaryViewController: UIViewController
+{
+    var text:String = ""
+
+    @IBOutlet weak var textLabel:UILabel?
+
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+
+        textLabel?.text = text
+    }
+}
 ```
 
 ## Passing Data Between View Controllers Using Segues (A → B) 
