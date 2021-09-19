@@ -62,10 +62,6 @@ class MainViewController: UIViewController
         // use type casting
         if let vc = segue.destination as? PrepareViewController {
             vc.text = "Passing Data Between View Controllers Using Segues (A → B)"
-        
-            vc.completionHandler = { data in
-                self.secondaryLabel.text = data
-            }
         }
         
         // or use the segue.identifier property
@@ -175,3 +171,52 @@ class SecondaryViewController: UIViewController {
 
 
 ## Passing Data Back with a Closure  
+<img src="https://github.com/YamamotoDesu/PassingData/blob/main/PassingData/Gif/DataBackWithClosure.gif" width="300" height="500"> 
+### SecondaryViewController       
+```swift
+class SecondaryViewController: UIViewController {
+    // Passing Data Back with a Closure
+    var completionHandler: ((String) -> Void)?
+    
+    @IBAction func onClosureButtonTap()
+    {
+        let result = completionHandler?("Passing Data Back with a Closure")
+
+        print("completionHandler returns... \(result)")
+    }
+}
+``` 
+
+### MainViewController 
+```swift
+class MainViewController: UIViewController
+{
+    var text:String = ""
+
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+    }
+    
+      //Passing Data Between View Controllers Using Segues (A → B)&
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // use type casting
+        if let vc = segue.destination as? PrepareViewController {
+            vc.text = "Passing Data Between View Controllers Using Segues (A → B)"
+        
+            vc.completionHandler = { data in
+                self.secondaryLabel.text = data
+            }
+        }
+        
+        // or use the segue.identifier property
+        if segue.identifier == "prepareVC" {
+            // Do stuff...
+        }
+        
+    }
+
+}
+```
+
