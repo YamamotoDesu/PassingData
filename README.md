@@ -41,7 +41,7 @@ class SecondaryViewController: UIViewController
 ```
 
 ## Passing Data Between View Controllers Using Segues (A → B) 
-<img src="https://github.com/YamamotoDesu/PassingData/blob/main/PassingData/Gif/ByProperties.gif" width="300" height="500"> 
+<img src="https://github.com/YamamotoDesu/PassingData/blob/main/PassingData/Gif/BySegues.gif" width="300" height="500"> 
 
 ### MainViewController 
 ```swift
