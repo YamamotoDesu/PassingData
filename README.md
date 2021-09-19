@@ -93,7 +93,9 @@ class PrepareViewController: UIViewController
         textLabel?.text = text
     }
 }
-```
+``` 
+<img src="https://user-images.githubusercontent.com/47273077/133923332-10534280-78f1-49d8-9985-262ad94fb443.png" width="600" height="300"> 
+
 
 ##  Passing Data Back with Properties and Functions (A ← B) 
 
