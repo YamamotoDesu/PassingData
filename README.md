@@ -19,6 +19,8 @@ class MainViewController: UIViewController
         let vc = SecondaryViewController(nibName: "SecondaryViewController", bundle: nil)
         vc.text = "Passing Data Between View Controllers with Properties (A → B)"
         
+         navigationController?.pushViewController(vc, animated: true)
+        
     }
 }
 ```
