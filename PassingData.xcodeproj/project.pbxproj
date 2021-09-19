@@ -83,7 +83,6 @@
 		7B87F47426EC7C01003BB1D2 = {
 			isa = PBXGroup;
 			children = (
-				7B3756F726EE0BFF0043D2B1 /* Gif */,
 				7B87F47F26EC7C01003BB1D2 /* PassingData */,
 				7B87F47E26EC7C01003BB1D2 /* Products */,
 			);
@@ -100,6 +99,7 @@
 		7B87F47F26EC7C01003BB1D2 /* PassingData */ = {
 			isa = PBXGroup;
 			children = (
+				7B3756F726EE0BFF0043D2B1 /* Gif */,
 				7B87F4BF26ECA64E003BB1D2 /* Delegate */,
 				7B87F4A026EC7E3E003BB1D2 /* Storyboard */,
 				7B87F49626EC7DA8003BB1D2 /* Controller */,
