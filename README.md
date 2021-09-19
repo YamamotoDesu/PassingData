@@ -139,5 +139,39 @@ class MainViewController: UIViewController
 ```
 
 ## Passing Data Back with Delegation 
+<img src="https://github.com/YamamotoDesu/PassingData/blob/main/PassingData/Gif/DataBackWithDelegation.gif" width="300" height="500"> 
+
+### SampleDelegate     
+```swift
+protocol SampleDelegate: AnyObject {
+    func setTextLabel(data: String)
+}
+``` 
+
+### MainViewController      
+```swift
+extension MainViewController: SampleDelegate {
+    
+    func setTextLabel(data: String) {
+        secondaryLabel.text = data
+    }
+    
+}
+```
+
+### SecondaryViewController       
+```swift
+class SecondaryViewController: UIViewController {
+    // Passing Data Back with Delegation
+    weak var delegate: SampleDelegate?
+    
+    @IBAction func onDelegateButtonTap()
+    {
+        delegate?.setTextLabel(data: "Passing Data Back with Delegation")
+    }
+}
+```
+
+
 
 ## Passing Data Back with a Closure  
