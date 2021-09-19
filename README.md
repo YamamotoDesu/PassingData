@@ -96,8 +96,47 @@ class PrepareViewController: UIViewController
 ``` 
 <img src="https://user-images.githubusercontent.com/47273077/133923332-10534280-78f1-49d8-9985-262ad94fb443.png" width="600" height="300"> 
 
-
 ##  Passing Data Back with Properties and Functions (A ← B) 
+<img src="https://github.com/YamamotoDesu/PassingData/blob/main/PassingData/Gif/DataBackWithProperties.gif" width="300" height="500"> 
+
+### SecondaryViewController 
+```swift
+class MainViewController: UIViewController
+{
+    // Passing Data Back with Properties and Functions (A ← B) ※ Not Ideal
+    var mainViewController:MainViewController?
+    
+    @IBAction func onButtonTap()
+    {
+        mainViewController?.onUserAction(data: "Passing Data Back with Properties and Functions (A ← B)")
+        navigationController?.popToRootViewController(animated: true)
+    }
+}
+```
+
+### MainViewController   
+```swift
+class MainViewController: UIViewController
+{
+    @IBOutlet weak var secondaryLabel: UILabel!
+
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+
+        textLabel?.text = text
+    }
+    
+        @IBAction func onButtonATap()
+    {
+        let vc = SecondaryViewController(nibName: "SecondaryViewController", bundle: nil)
+        vc.text = "Passing Data Between View Controllers with Properties (A → B)"
+        
+        vc.mainViewController = self
+        
+    }
+}
+```
 
 ## Passing Data Back with Delegation 
 
